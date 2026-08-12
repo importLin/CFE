@@ -1,0 +1,47 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.installed.cfg
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ---- Hugging Face / model cache ----
+# ViViT weights are downloaded at runtime; never commit them
+.cache/
+hf_cache/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# ---- CFE-PPAR generated artifacts ----
+# Encrypted clips are produced by compression_friendly_encryption.py.
+# Keep the plaintext sample(s) under samples/, ignore generated encrypted ones.
+
+# ---- Development tools ----
+# Scripts that produce figures/numbers for the README but are not part of the
+# released implementation -- notably the CFE-vs-LCVE comparison, which reaches
+# outside this repository for the baseline and so cannot be reproduced from
+# this checkout alone. Never publish them.
+.claude/
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
